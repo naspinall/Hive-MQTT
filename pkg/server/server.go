@@ -18,8 +18,8 @@ import (
 )
 
 func NewMQTTBroker() MQTT {
-	pc := config.LoadFromEnvironment()
 
+	pc := config.LoadFromEnvironment()
 	services, err := models.NewServices(
 		models.WithGorm("postgres", pc.ConnectionInfo()),
 		models.WithRetain(),
